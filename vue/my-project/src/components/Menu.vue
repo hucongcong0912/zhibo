@@ -1,5 +1,6 @@
 <!-- 菜单页面 -->
 <template>
+<!-- 左侧菜单 -->
 	<div class="sidebar" id="sidebar">
 					<div class="sidebar-shortcuts" id="sidebar-shortcuts">
 						<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
