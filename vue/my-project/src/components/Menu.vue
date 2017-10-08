@@ -1,6 +1,6 @@
 <!-- 菜单页面 -->
 <template>
-<!-- 左侧菜单 -->
+<!-- 左侧菜单123 -->
 	<div class="sidebar" id="sidebar">
 					<div class="sidebar-shortcuts" id="sidebar-shortcuts">
 						<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
@@ -138,7 +138,7 @@
 												<li>
 													<a href="#">
 														<i class="icon-plus"></i>
-														添加产品
+														添加产品数量
 													</a>
 												</li>
 
