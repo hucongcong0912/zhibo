@@ -16,7 +16,7 @@ class LoginController extends Controller
             $data = DB::select('select * FROM `user` where `user_name` = "'.$username.'" and `pwd` = "'.md5($password).'"');
             if($data){
             	
-            	$_SESSION['user']=$data;
+            	$_SESSION['user']=$data[0];
             	$arr= array('msg'=>1000,'data'=>$data);
 
             }else{
