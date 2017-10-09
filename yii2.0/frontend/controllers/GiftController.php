@@ -21,6 +21,7 @@ class GiftController extends Controller
 
       $model = Yii::$app->db->createCommand("select * from  gift")->queryAll();
       $cd['data'] = $model;
+<<<<<<< HEAD
        //print_r($cd);die;
       $cd=json_encode($cd);
        // print_r($cd); 
@@ -51,11 +52,19 @@ class GiftController extends Controller
        //print_r($cd);die;
       $cd=json_encode($cd);
        // print_r($cd); 
+=======
+
+      $cd=json_encode($cd);
+       // print_r($cd); die;
+
+       
+>>>>>>> 2aab17c526dc2d4982580c8538efc9b59df963f1
        $callback=$_GET['callback'];
        if(!empty($callback)){
           echo $callback.'('.$cd.')';
        }
 
+<<<<<<< HEAD
 
 
    }
@@ -64,5 +73,8 @@ class GiftController extends Controller
 
 
 
+=======
+    }
+>>>>>>> 2aab17c526dc2d4982580c8538efc9b59df963f1
 
 }

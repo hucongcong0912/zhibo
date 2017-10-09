@@ -27,14 +27,21 @@ import useredit from './components/admin/useredit';
 
 
 import user_list from './components/user/list'; // 用户列表展示
+<<<<<<< HEAD
 import gift_list from './components/gift/list'; // 礼物列表展示
 import gift_add from './components/gift/add'; // 礼物添加列表
+=======
+import user_show from './components/user/show'; // 用户详情
+
+
+>>>>>>> 2aab17c526dc2d4982580c8538efc9b59df963f1
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 
 var router = new VueRouter({
 	routes: [
+<<<<<<< HEAD
 	   
 	  {
 	  	path: '/user/list', // 用户列表展示
@@ -48,6 +55,25 @@ var router = new VueRouter({
 	  	path: '/gift/add', // 礼物添加列表
 	  	component:gift_add,
 	  },
+=======
+	{
+	  	path: '/', // 后台登录
+	  	component:Login,
+	  },
+
+	  
+	   {
+	  	path: '/user/list', // 用户列表展示
+	  	component:user_list,
+	  },
+	   
+	  {
+	  	path: '/user/show/:id', // 用户详情信息
+	  	component:user_show,
+	  },
+
+
+>>>>>>> 2aab17c526dc2d4982580c8538efc9b59df963f1
 	  {
 	  	path: '/admin/useredit/:id',
 	  	component:useredit,

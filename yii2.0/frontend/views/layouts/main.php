@@ -477,7 +477,11 @@ AppAsset::register($this);
                                 </li>
 
                                 <li>
+<<<<<<< HEAD
                                     <a href="http://admin.zb.com/frontend/web/index.php?r=user/add" class="dropdown-toggle">
+=======
+                                    <a href="http://admin.zb.com/frontend/web/index.php?r=user" class="dropdown-toggle">
+>>>>>>> 2aab17c526dc2d4982580c8538efc9b59df963f1
                                         <i class="icon-double-angle-right"></i>
 
                                         分类管理
@@ -486,13 +490,21 @@ AppAsset::register($this);
 
                                     <ul class="submenu">
                                         <li>
+<<<<<<< HEAD
                                             <a href="?r=type/sel">
+=======
+                                            <a href="http://admin.zb.com/frontend/web/index.php?r=user">
+>>>>>>> 2aab17c526dc2d4982580c8538efc9b59df963f1
                                                 <i class="icon-list"></i>
                                                 展示
                                             </a>
                                         </li>
                                         <li>
+<<<<<<< HEAD
                                             <a href="?r=type/add">
+=======
+                                            <a href="http://admin.zb.com/frontend/web/index.php?r=user">
+>>>>>>> 2aab17c526dc2d4982580c8538efc9b59df963f1
                                                 <i class="icon-pencil"></i>
                                                 添加
                                             </a>
