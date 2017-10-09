@@ -43,7 +43,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </form>
             </div>
 
-            <?php  if(!$_SESSION['user']){ ?> 
+            <?php  if(!isset($_SESSION['user'])){ ?> 
             <div class="header-top-right">
                 {{--<div class="file">--}}
                     {{--<a href="upload.html">Upload</a>--}}

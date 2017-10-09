@@ -45,7 +45,6 @@ class IndexController extends Controller
     }
 	// 个人中心
 	public function user(){
-		$_SESSION['user'] = 1;
 		if (isset($_SESSION['user'])) {
 			$user = DB::table('log')->where('user_id', $_SESSION['user'])->first();
 			// echo "<pre>";
