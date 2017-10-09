@@ -72,8 +72,11 @@
       <td>{{respon.gift_name}}</td>
       <td class="hidden-480">{{respon.price}}</td>
       <td>{{respon.gift_ctime}}</td>
-      <td v-if="respon.static === true">启用</td>
-      <td v-if="respon.static === 0">不启用</td>
+      <td>
+       <span v-if="(respon.gift_static == 1 )">启用</span>
+       <span v-if="(respon.gift_static == 0 )">不启用</span>
+      </td>
+      <!-- <td v-if="respon.static === 0">不启用</td> -->
       <td>
         <div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
           <button class="btn btn-xs btn-success">

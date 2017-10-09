@@ -21,7 +21,6 @@ class GiftController extends Controller
 
       $model = Yii::$app->db->createCommand("select * from  gift")->queryAll();
       $cd['data'] = $model;
-<<<<<<< HEAD
        //print_r($cd);die;
       $cd=json_encode($cd);
        // print_r($cd); 
@@ -33,7 +32,7 @@ class GiftController extends Controller
     }
    public function actionAdds(){
        $datas=$_GET;
-       $gift_ctime=date();
+       $gift_ctime=date('Y-m-d H:i:s');
        $gift_name=$_GET['gift_name'];
        $price=$_GET['price'];
        // print_r($data);die;
@@ -52,19 +51,11 @@ class GiftController extends Controller
        //print_r($cd);die;
       $cd=json_encode($cd);
        // print_r($cd); 
-=======
-
-      $cd=json_encode($cd);
-       // print_r($cd); die;
-
-       
->>>>>>> 2aab17c526dc2d4982580c8538efc9b59df963f1
        $callback=$_GET['callback'];
        if(!empty($callback)){
           echo $callback.'('.$cd.')';
        }
 
-<<<<<<< HEAD
 
 
    }
@@ -73,8 +64,5 @@ class GiftController extends Controller
 
 
 
-=======
-    }
->>>>>>> 2aab17c526dc2d4982580c8538efc9b59df963f1
 
 }
