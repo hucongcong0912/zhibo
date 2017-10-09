@@ -23,6 +23,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 
 @section('header')
+<div>
     <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -42,7 +43,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </form>
             </div>
 
-
+            <?php  if(!$_SESSION){?> 
             <div class="header-top-right">
                 {{--<div class="file">--}}
                     {{--<a href="upload.html">Upload</a>--}}
@@ -70,9 +71,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div>
 
                         <div class="signup">
-                            <form>
-                                <input type="text" pattern="([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?" required="required" placeholder="Enter email / mobile" class="email">
-                                <input type="password" autocomplete="off" title="Minimum 6 characters required" pattern=".{6,}" required="required" placeholder="Password">
+                            <form action="{{ url('login/login_add') }}" method="GET">
+                                <input type="text" pattern="([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?" required="required" name="username" placeholder="Enter email / mobile" class="email">
+                                <input type="password" name="password" autocomplete="off" title="Minimum 6 characters required" pattern=".{6,}" required="required" placeholder="Password">
                                 <input type="submit" value="注册">
                             </form>
 
@@ -120,9 +121,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
                         </div>
                         <div class="signup">
-                            <form>
-                                <input type="text" class="email" placeholder="Enter email / mobile" required="required" pattern="([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?"/>
-                                <input type="password" placeholder="Password" required="required" pattern=".{6,}" title="Minimum 6 characters required" autocomplete="off" />
+                            <form action="{{ url('login/login_do') }}" method="GET">
+                                <input type="text" class="email" placeholder="Enter email / mobile" required="required" name="username" pattern="([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?"/>
+                                <input type="password" placeholder="Password" required="required" pattern=".{6,}" name="password" title="Minimum 6 characters required" autocomplete="off" />
                                 <input type="submit"  value="登录"/>
                             </form>
 
@@ -132,12 +133,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="clearfix"> </div>
             </div>
-
+           <?php }else{ ?>
+                <div class="signin">
+                    <a href="{{ url('login/login_out')}}" class="play-icon popup-with-zoom-anim">退出</a>
+                   
+                </div>
+            <?php } ?>
 
         </div>
         <div class="clearfix"> </div>
     </div>
 </nav>
+</div>
 @show()
 
 
