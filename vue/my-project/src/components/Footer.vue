@@ -1,9 +1,7 @@
-          Imain, 
 <template>
-  <div class="ttt">
-    这是尾部导航<br><br><br><br>
-    {{msg}}
 
+  <div class="ttt">
+    莫慌    一点一点来
   </div>
 </template>
 
@@ -12,14 +10,14 @@ export default {
   name: 'ifooter',
   data () {
     return {
-      msg: 'Welcome to Your Vue',
+      msg: 'Welcome to Your Vue.js 尾部',
+      seen: 'niubi'
     }    
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<!-- scoped  是单页面使用样式 -->
 <style scoped>
 h1, h2 {
   font-weight: normal;

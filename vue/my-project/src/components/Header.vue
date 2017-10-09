@@ -1,5 +1,8 @@
 <template>
-    <div class="navbar navbar-default" id="navbar">
+  <div class="Iheader">
+   <div class="navbar navbar-default" id="navbar">
+   
+
       <div class="navbar-container" id="navbar-container">
         <div class="navbar-header pull-left">
           <a href="#" class="navbar-brand">
@@ -117,7 +120,7 @@
                 </li>
 
                 <li>
-                  <a href="#"
+                  <a href="#">
                     <div class="clearfix">
                       <span class="pull-left">
                         <i class="btn btn-xs no-hover btn-success icon-shopping-cart"></i>
@@ -163,7 +166,7 @@
 
                 <li>
                   <a href="#">
-                    <img src="static/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
+                    <img src="../../static/assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
                     <span class="msg-body">
                       <span class="msg-title">
                         <span class="blue">Alex:</span>
@@ -180,7 +183,7 @@
 
                 <li>
                   <a href="#">
-                    <img src="static/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
+                    <img src="../../static/assets/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
                     <span class="msg-body">
                       <span class="msg-title">
                         <span class="blue">Susan:</span>
@@ -197,7 +200,7 @@
 
                 <li>
                   <a href="#">
-                    <img src="static/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
+                    <img src="../../static/assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
                     <span class="msg-body">
                       <span class="msg-title">
                         <span class="blue">Bob:</span>
@@ -223,7 +226,7 @@
 
             <li class="light-blue">
               <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-                <img class="nav-user-photo" src="static/avatars/user.jpg" alt="Jason's Photo" />
+                <img class="nav-user-photo" src="../../static/assets/avatars/user.jpg" alt="Jason's Photo" />
                 <span class="user-info">
                   <small>欢迎光临,</small>
                   Jason
@@ -250,7 +253,7 @@
                 <li class="divider"></li>
 
                 <li>
-                  <a href="/#/login">
+                  <a href="#/admin/login">
                     <i class="icon-off"></i>
                     退出
                   </a>
@@ -261,6 +264,7 @@
         </div><!-- /.navbar-header -->
       </div><!-- /.container -->
     </div>
+  </div>
 </template>
 
 <script>
@@ -268,7 +272,8 @@ export default {
   name: 'iheader',
   data () {
     return {
-      message: ''
+      message: '',
+      seen: '查询关键词'
     }    
   }
 }
@@ -276,7 +281,21 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#navbar,#sidebar{
-    display:block;
-  }
+h1, h2 {
+  font-weight: normal;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  color: #42b983;
+}
 </style>

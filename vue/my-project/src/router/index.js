@@ -5,7 +5,14 @@ import Typography from  '@/components/main/Typography'
 import Elements from  '@/components/main/Elements'
 import Login from  '@/components/main/Login'
 import Register from  '@/components/main/Register'
-import Gift_show from  '@/components/gift/gift_show'
+import Actors_add from  '@/components/actors/actors_add'
+
+
+import user_list from  '@/components/user/list' // 用户列表
+import user_show from  '@/components/user/show' // 用户详情信息
+import gift_list from  '@/components/gift/list' // 礼物列表
+
+
 
 
 Vue.use(Router)
@@ -19,34 +26,42 @@ export default new Router({
       component: Main
     },
     {
-      path: '/Main',
+      path: '/main',
       name: 'Main',
       component: Main
     },
     {
-      path: '/Typography',
+      path: '/typography',
       name: 'Typography',
       component: Typography
     },
-     {
-      path: '/Gift_show',
-      name: ' Gift_show',
-      component: Gift_show
-    },
     {
-      path: '/Elements',
+      path: '/elements',
       name: 'Elements',
       component: Elements
     },
     {
-      path: '/Login',
+      path: '/login',
       name: 'Login',
       component: Login
     },
     {
-      path: '/Register',
+      path: '/register',
       name: 'Register',
       component: Register
     },
+    {
+      path: '/user/list', // 用户申请列表
+      component: user_list
+    },
+    {
+      path: '/user/show', // 用户详情信息
+      component: user_show
+    },
+    {
+      path: '/gift/list', // 礼物列表
+      component: gift_list
+    },
+
   ]
 })
