@@ -4,16 +4,12 @@ namespace frontend\controllers;
 use Yii;
 use yii\web\Controller;
 
-<<<<<<< HEAD
-=======
 use frontend\models\Log; // 用户详情表
->>>>>>> 2aab17c526dc2d4982580c8538efc9b59df963f1
-/**
  * 用户
  */
 class UserController extends Controller
 {
-<<<<<<< HEAD
+
     /**
      * 查看
      */
@@ -29,7 +25,7 @@ class UserController extends Controller
 
     // }
 
-=======
+
     
     // 用户申请成为主播列表
     public function actionLists(){
@@ -81,7 +77,4 @@ class UserController extends Controller
         echo $callback , '(' , json_encode($data) ,')';
 
     }
-
-    
->>>>>>> 2aab17c526dc2d4982580c8538efc9b59df963f1
 }
