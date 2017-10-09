@@ -50,7 +50,7 @@ class LoginController extends Controller
         return view('index/index',['user'=>$arr]);
 	}
 	public function login_out(){
-		session_unset();
+		$_SESSION['user']=[];
 		return view('index/index');
 	}
 }

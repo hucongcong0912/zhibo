@@ -43,7 +43,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </form>
             </div>
 
-            <?php  if(!$_SESSION){?> 
+            <?php  if(!$_SESSION['user']){ ?> 
             <div class="header-top-right">
                 {{--<div class="file">--}}
                     {{--<a href="upload.html">Upload</a>--}}
@@ -136,7 +136,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
            <?php }else{ ?>
                 <div class="signin">
                     <a href="{{ url('login/login_out')}}" class="play-icon popup-with-zoom-anim">退出</a>
-                   
                 </div>
             <?php } ?>
 

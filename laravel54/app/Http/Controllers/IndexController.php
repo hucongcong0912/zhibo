@@ -9,7 +9,7 @@ class IndexController extends Controller
 	// 构造方法
 	public function __construct(){
 		$type = $this->type();
-		session_start();
+		
 		$_SESSION['type'] = $type;
 	}
 	// 首页
