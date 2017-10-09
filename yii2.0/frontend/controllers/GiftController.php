@@ -19,9 +19,50 @@ class GiftController extends Controller
 
     public function actionShow(){
 
-      $model = Yii::$app->db->createCommand("select * from  type")->queryAll();
-
+      $model = Yii::$app->db->createCommand("select * from  gift")->queryAll();
+      $cd['data'] = $model;
+       //print_r($cd);die;
+      $cd=json_encode($cd);
+       // print_r($cd); 
+       $callback=$_GET['callback'];
+       if(!empty($callback)){
+          echo $callback.'('.$cd.')';
+       }
 
     }
+   public function actionAdds(){
+       $datas=$_GET;
+       $gift_ctime=date();
+       $gift_name=$_GET['gift_name'];
+       $price=$_GET['price'];
+       // print_r($data);die;
+     $cd=Yii::$app->db->createCommand()->insert('gift', ['gift_name' => $gift_name,'gift_ctime' =>$gift_ctime,'price'=>$price])->execute();
+     // print_r($cd);die;
+   }
+
+ public function actionLikes(){
+
+    $data=$_GET;
+    $gift_name=$_GET['gift_name'];
+    // print_r($data);die;
+     $model = Yii::$app->db->createCommand("select * from  gift where gift_name  like '%$gift_name%'")->queryAll();
+       //print_r($model);die;
+      $cd['data'] = $model;
+       //print_r($cd);die;
+      $cd=json_encode($cd);
+       // print_r($cd); 
+       $callback=$_GET['callback'];
+       if(!empty($callback)){
+          echo $callback.'('.$cd.')';
+       }
+
+
+
+   }
+
+
+
+
+
 
 }
