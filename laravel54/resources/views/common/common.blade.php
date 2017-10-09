@@ -152,124 +152,38 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 @section('left')
     <div class="col-sm-3 col-md-2 sidebar">
 
-
-
         <div class="drop-navigation drop-navigation">
             <ul class="nav nav-sidebar">
                 <li class="active"><a href="{{url('index/index')}}" class="home-icon"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>我的订阅</a></li>
                 <li><a href="{{url('index/all')}}" class="user-icon"><span class="glyphicon glyphicon-home glyphicon-blackboard" aria-hidden="true"></span>全部直播</a></li>
                 <li><a href="{{url('index/index')}}" class="sub-icon"><span class="glyphicon glyphicon-home glyphicon-hourglass" aria-hidden="true"></span>全部分类</a></li>
 
-                <li>
-                    <a href="javascript:void (0)" class="menu1">
-                        <span class="glyphicon glyphicon-film" aria-hidden="true"></span>网游竞技
-                        <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
-                    </a>
-                </li>
-                <ul class="cl-effect-1" style="display: none">
-                    <li><a href="{{ asset('index/all') }}">英雄联盟</a></li>
-                    <li><a href="movies.html">穿越火线</a></li>
-                    <li><a href="movies.html">DNF</a></li>
-                    <li><a href="movies.html">魔兽DOTA</a></li>
-                </ul>
-                <!-- script-for-menu -->
-                <script>
-                    $( "li a.menu1" ).click(function() {
-                        $( "ul.cl-effect-1" ).slideToggle( 300, function() {
-                            // Animation complete.
-                        });
-                    });
-                </script>
-
-
-
-                <li>
-                    <a href="javascript:void (0)" class="menu2">
-                        <span class="glyphicon glyphicon-film" aria-hidden="false"></span>手游休闲<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
-                    </a>
-                </li>
-                <ul class="cl-effect-2" style="display: none">
-                    <li><a href="movies.html">English</a></li>
-                    <li><a href="movies.html">Chinese</a></li>
-                    <li><a href="movies.html">Hindi</a></li>
-                </ul>
-                <!-- script-for-menu -->
-                <script>
-                    $( "li a.menu2" ).click(function() {
-                        $( "ul.cl-effect-2" ).slideToggle( 300, function() {
-                            // Animation complete.
-                        });
-                    });
-                </script>
-
-
-
-
-
-
-                <li>
-                    <a href="javascript:void (0)" class="menu3">
-                        <span class="glyphicon glyphicon-film glyphicon-king" aria-hidden="true"></span>单级热游<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
-                    </a>
-                </li>
-                <ul class="cl-effect-3" style="display: none">
-                    <li><a href="sports.html">Football</a></li>
-                    <li><a href="sports.html">Cricket</a></li>
-                    <li><a href="sports.html">Tennis</a></li>
-                    <li><a href="sports.html">Shattil</a></li>
-                </ul>
-                <!-- script-for-menu -->
-                <script>
-                    $( "li a.menu3" ).click(function() {
-                        $( "ul.cl-effect-3" ).slideToggle( 300, function() {
-                            // Animation complete.
-                        });
-                    });
-                </script>
-
-
-                <li>
-                    <a href="javascript:void (0)" class="menu4">
-                        <span class="glyphicon glyphicon-film glyphicon-king" aria-hidden="true"></span>娱乐天地<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
-                    </a>
-                </li>
-                <ul class="cl-effect-4" style="display: none">
-                    <li><a href="sports.html">Football</a></li>
-                    <li><a href="sports.html">Cricket</a></li>
-                    <li><a href="sports.html">Tennis</a></li>
-                    <li><a href="sports.html">Shattil</a></li>
-                </ul>
-                <!-- script-for-menu -->
-                <script>
-                    $( "li a.menu4" ).click(function() {
-                        $( "ul.cl-effect-4" ).slideToggle( 300, function() {
-                            // Animation complete.
-                        });
-                    });
-                </script>
-
-
-
-                <li>
-                    <a href="javascript:void (0)" class="menu5" >
-                        <span class="glyphicon glyphicon-film glyphicon-king" aria-hidden="true"></span>123<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
-                    </a>
-                </li>
-                <ul class="cl-effect-5" style="display: none">
-                    <li><a href="sports.html">Football</a></li>
-                    <li><a href="sports.html">Cricket</a></li>
-                    <li><a href="sports.html">Tennis</a></li>
-                    <li><a href="sports.html">Shattil</a></li>
-                </ul>
-                <!-- script-for-menu -->
-                <script>
-                    $( "li a.menu5" ).click(function() {
-                        $( "ul.cl-effect-5" ).slideToggle( 300, function() {
-                            // Animation complete.
-                        });
-                    });
-                </script>
-                
+                <?php foreach ($_SESSION['type'] as $key => $value) { ?>
+                    <li>
+                        <a href="javascript:void (0)" class="menu<?= $key?>">
+                            <span class="glyphicon glyphicon-film" aria-hidden="true"></span><?= $value->type_name ?>
+                            <?php if (isset($value->body)) {  ?>
+                            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                            <?php } ?>
+                        </a>
+                    </li>
+                    <?php if (isset($value->body)) {  ?>
+                        <ul class="cl-effect-<?= $key?>" style="display: none">
+                            <?php foreach ($value->body as $k_type => $v_type) { ?>
+                            <li><a href="{{ asset('index/all') }}?t_id=<?= $v_type->type_id ?>"><?= $v_type->type_name ?></a></li>
+                            <?php } ?>
+                        </ul>
+                        <!-- script-for-menu -->
+                        <script>
+                            $( "li a.menu<?= $key?>" ).click(function() {
+                                $( "ul.cl-effect-<?= $key?>" ).slideToggle( 300, function() {
+                                    // Animation complete.
+                                });
+                            });
+                        </script>
+                    <?php } ?>
+                <?php } ?>
+            
             </ul>
             <!-- script-for-menu -->
             <script>
