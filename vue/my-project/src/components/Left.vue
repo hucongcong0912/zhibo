@@ -232,59 +232,31 @@
             <li>
               <a href="#" class="dropdown-toggle">
                 <i class="icon-tag"></i>
-                <span class="menu-text"> 粉丝 </span>
+                <span class="menu-text">分类管理</span>
 
                 <!-- <b class="arrow icon-angle-down"></b> -->
               </a>
 
               <ul class="submenu">
                 <li>
-                  <a href="#/admin/add">
+                  <a href="/#/sort/add">
                     <i class="icon-double-angle-right"></i>
-                    粉丝添加
+                    分类添加
                   </a>
                 </li>
 
                 <li>
-                  <a href="#/admin/type">
+                  <a href="/#/sort/list">
                     <i class="icon-double-angle-right"></i>
-                    粉丝统计
+                      分类展示
                   </a>
                 </li>
 
-                <li>
-                  <a href="pricing.html">
-                    <i class="icon-double-angle-right"></i>
-                    售价单
-                  </a>
-                </li>
-
-                <li>
-                  <a href="invoice.html">
-                    <i class="icon-double-angle-right"></i>
-                    购物车
-                  </a>
-                </li>
-
-                <li>
-                  <a href="timeline.html">
-                    <i class="icon-double-angle-right"></i>
-                    时间轴
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#/admin/Login">
-                    <i class="icon-double-angle-right"></i>
-                    登录 &amp; 注册
-                  </a>
-                </li>
+               
               </ul>
             </li>
 
-<<<<<<< HEAD
-=======
-                        <li>
+              <li>
               <a href="#" class="dropdown-toggle">
                 <i class="icon-tag"></i>
                 <span class="menu-text"> 礼物 </span>
@@ -337,7 +309,6 @@
               </ul>
             </li>
 
->>>>>>> 2aab17c526dc2d4982580c8538efc9b59df963f1
            <!--  <li>
              <a href="#" class="dropdown-toggle">
                <i class="icon-file-alt"></i>

@@ -20,17 +20,10 @@
 						<div class="nav-search" id="nav-search">
 							<form class="form-search">
 								<span class="input-icon">
-<<<<<<< HEAD
-									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
-									<i class="icon-search nav-search-icon"></i>
-								</span>
-								<button class="btn ">搜索</button>
-=======
 									<input v-model="search_key" type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
 									<i class="icon-search nav-search-icon"></i>
 								</span>
 								<button class="btn " v-on:click="search()">搜索</button>
->>>>>>> 2aab17c526dc2d4982580c8538efc9b59df963f1
 							</form>
 
 						</div><!-- #nav-search -->
@@ -82,10 +75,6 @@
 				<a href="#">{{respon.user_id}}</a>
 			</td>
 			<td>{{respon.nickname}}</td>
-<<<<<<< HEAD
-			<td class="hidden-480">{{respon.sex}}</td>
-			<td>{{respon.is_anchor}}</td>
-=======
 			<td class="hidden-480">
 				<span v-if="(respon.sex == 2)">女</span>
 				<span v-if="(respon.sex == 1)">男</span>
@@ -98,24 +87,16 @@
 			</td>
 
 			
->>>>>>> 2aab17c526dc2d4982580c8538efc9b59df963f1
 
 
 			<td>
 				<div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
-<<<<<<< HEAD
-					<button class="btn btn-xs btn-success">
-						<i class="icon-ok bigger-120"></i>
-					</button>
-
-=======
 
 					<button v-if="(respon.is_anchor == 2)" v-on:click='success(respon.user_id)' class="btn btn-xs btn-success">
 						<i class="icon-ok bigger-120"></i>
 					</button>
 
 
->>>>>>> 2aab17c526dc2d4982580c8538efc9b59df963f1
 					<button class="btn btn-xs btn-info" v-on:click="upd(respon)">
 						<i class="icon-edit bigger-120" ></i>
 					</button>
@@ -199,16 +180,6 @@
 <script>
 export default {
 
-<<<<<<< HEAD
-  		
-  
-
-	methods: {
-	upd: function (message) {
-  		alert(message.id)
-  		window.location.href='#/admin/useredit/'+message.id
-  	},
-=======
   	data () {
 	    return {
 	      search_key :'',
@@ -270,7 +241,6 @@ export default {
   	},
 
   	// 分页
->>>>>>> 2aab17c526dc2d4982580c8538efc9b59df963f1
   	cpage:function(message){
   		if (message==='prev') {
   			this.page-=1
@@ -282,27 +252,16 @@ export default {
   		}else if(message==='frist'){
   			this.page=1
   		}
-<<<<<<< HEAD
-
-  		this.$http.jsonp(url+'?r=user/lists&p='+this.page, {}, {
-=======
   		var search_key = this.search_key;
 
   		this.$http.jsonp(url+'?r=user/lists&p='+this.page+"&search_key="+search_key, {}, {
->>>>>>> 2aab17c526dc2d4982580c8538efc9b59df963f1
 	        emulateJSON: true
 	    }).then(function(response) {
-	    	
-	    	
 	 	    this.result = response.body.data 
 	    }, function(response) {
 	    	
 	        
-<<<<<<< HEAD
-	        // this.result = response.body
-=======
 	        
->>>>>>> 2aab17c526dc2d4982580c8538efc9b59df963f1
 	    });
 
 
@@ -325,25 +284,7 @@ export default {
     },
    	},
   	
-<<<<<<< HEAD
-  	data () {
-    return {
-      result: ['id','ff'],
-      page: 1,
-      sites: [
-      { name: 'id' },
-      { name: '昵称' },
-      { name: '性別' },
-      { name: '申请状态' },
-      { name: '操作' },
 
-     
-    ]
-    }    
-  },
-=======
-
->>>>>>> 2aab17c526dc2d4982580c8538efc9b59df963f1
 
     mounted: function () {
 		this.$http.jsonp(url+'?r=user/lists', {}, {
@@ -352,24 +293,17 @@ export default {
 	    	
 	    	
 	 	    this.result = response.body.data 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 2aab17c526dc2d4982580c8538efc9b59df963f1
 	    }, function(response) {
 	    	
 	      
 	    });
-<<<<<<< HEAD
-    }
-=======
     },
 
  
     	
     
->>>>>>> 2aab17c526dc2d4982580c8538efc9b59df963f1
  
 }
 </script>
