@@ -16,7 +16,7 @@ class GiftController extends Controller
     // {
     //     return $this->render('user');
     // }
-
+    //展示
     public function actionShow(){
 
       $model = Yii::$app->db->createCommand("select * from  gift")->queryAll();
@@ -30,6 +30,7 @@ class GiftController extends Controller
        }
 
     }
+    //添加
    public function actionAdds(){
        $datas=$_GET;
        $gift_ctime=date('Y-m-d H:i:s');
@@ -39,7 +40,7 @@ class GiftController extends Controller
      $cd=Yii::$app->db->createCommand()->insert('gift', ['gift_name' => $gift_name,'gift_ctime' =>$gift_ctime,'price'=>$price])->execute();
      // print_r($cd);die;
    }
-
+//查询
  public function actionLikes(){
 
     $data=$_GET;
@@ -55,11 +56,20 @@ class GiftController extends Controller
        if(!empty($callback)){
           echo $callback.'('.$cd.')';
        }
-
-
-
    }
 
+     public function actionDels(){
+      $data=$_GET;
+      $gift_id=$_GET['gift_id'];
+      $cd=Yii::$app->db->createCommand("delete  from gift where gift_id='$gift_id'")->execute();  
+      $model = Yii::$app->db->createCommand("select * from  gift")->queryAll();
+      $cds['data'] = $model;
+      $cds=json_encode($cds);
+       $callback=$_GET['callback'];
+       if(!empty($callback)){
+          echo $callback.'('.$cds.')';
+       }  
+    }
 
 
 

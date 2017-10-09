@@ -10,7 +10,7 @@
                 <i class="icon-home home-icon"></i>
                 <a href="#">礼物管理</a>
               </li>
-
+              
               <li>
                 <a href="#">礼物展示</a>
               </li>
@@ -80,20 +80,20 @@
       <td>
         <div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
           <button class="btn btn-xs btn-success">
-            <i class="icon-ok bigger-120"></i>
+            <a href="#/gift/add"><i class="icon-ok bigger-120"></i></a> 
           </button>
 
           <button class="btn btn-xs btn-info" v-on:click="upd(respon)">
             <i class="icon-edit bigger-120" ></i>
           </button>
 
-          <!-- <button class="btn btn-xs btn-danger" v-on:click="del(respon)">
+          <button class="btn btn-xs btn-danger" v-on:click="del(respon.gift_id)">
             <i class="icon-trash bigger-120"></i>
-          </button> -->
-
-          <button class="btn btn-xs btn-warning">
-            <i class="icon-flag bigger-120"></i>
           </button>
+
+        <!--   <button class="btn btn-xs btn-warning">
+            <i class="icon-flag bigger-120"></i>
+          </button> -->
         </div>
 
         <div class="visible-xs visible-sm hidden-md hidden-lg">
@@ -103,29 +103,6 @@
             </button>
 
             <ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
-              <li>
-                <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
-                  <span class="blue">
-                    <i class="icon-zoom-in bigger-120"></i>
-                  </span>
-                </a>
-              </li>
-
-              <li>
-                <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
-                  <span class="green">
-                    <i class="icon-edit bigger-120"></i>
-                  </span>
-                </a>
-              </li>
-
-              <li>
-                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
-                  <span class="red">
-                    <i class="icon-trash bigger-120"></i>
-                  </span>
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -170,8 +147,8 @@ export default {
           // this.result = response.body
       });
   },
-  upd: function (message) {
-      alert(message.id)
+    upd: function (message) {
+      // alert(message.id)
       window.location.href='#/admin/useredit/'+message.id
     },
     cpage:function(message){
@@ -198,23 +175,20 @@ export default {
           // this.result = response.body
       });
 
-
-
     },
     
-    del: function (message) {
+    del: function (gift_id) {
         if (!confirm('你确定要删除吗？')) {return};
-       
-          this.$http.jsonp(url+'?r=type/del&id='+message.id, {}, {
+          this.$http.jsonp(url+'?r=gift/dels&gift_id='+gift_id, {}, {
           emulateJSON: true
       }).then(function(response) {
         alert('删除成功') 
+        // alert(response)
         console.log(response)
-        this.result = response.body 
+        this.result = response.body.data
       }, function(response) {
-        
           console.log(response)
-          this.result = response.body
+          this.result = response.body.data
       });
     },
     },
