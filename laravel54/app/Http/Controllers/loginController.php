@@ -11,9 +11,9 @@ class LoginController extends Controller
 		$username = isset($_GET['username'])?$_GET['username']:'';
         $password = isset($_GET['password'])?$_GET['password']:'';
         if(!$username || !$password){
-            $arr= array('msg'=>1002,'data'=>'账号密码为空');
+            echo "<script>alert('账号密码为空')</script>";
         }else{
-            $data = DB::table('user')->where(['user_name'=>$username,'pwd'=>md5($password)])->get();
+            $data = DB::select('select * FROM `user` where `user_name` = "'.$username.'" and `pwd` = "'.md5($password).'"');
             if($data){
             	
             	$_SESSION['user']=$data;
@@ -30,19 +30,19 @@ class LoginController extends Controller
         $password = isset($_GET['password'])?$_GET['password']:'';
         // echo $username.$password;die;
         if(!$username || !$password){
-            $arr = array('msg'=>1002,'data'=>'账号密码为空');
+            echo "<script>alert('账号密码为空')</script>";
         }else{
         	$data = DB::select('select * FROM `user` where `user_name` = "'.$username.'"');          
             // print_r($data);die;
             if($data){
-            	$arr = array('msg'=>1004,'data'=>'账号已存在');
+            	echo "<script>alert('账号已存在')</script>";
             }else{      	
             	$arr = array('user_name'=>$username,'pwd'=>md5($password));
             	$data =	DB::table('user')->insert($arr);
             	if($data){
             		$arr = array('msg'=>1000,'data'=>$data);
             	}else{
-            		$arr = array('msg'=>1005,'data'=>'账号添加失败');
+            		echo "<script>alert('账号添加')</script>";
             	}
             }
         }
