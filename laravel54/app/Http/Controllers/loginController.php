@@ -20,7 +20,7 @@ class LoginController extends Controller
             	$arr= array('msg'=>1000,'data'=>$data);
 
             }else{
-            	$arr= array('msg'=>1001,'data'=>'账号密码不匹配');
+            	echo "<script>alert('密码错误')</script>";
             }
         }
         return view('index/index');

@@ -7,7 +7,8 @@ use Illuminate\Support\Facades\DB;
 class IndexController extends Controller
 {
 	public function index()
-	{
+	{	
+		// print_r($_SESSION);die;
         return view('index/index');
 	}
 

@@ -32,3 +32,9 @@ route::any('test/create', 'TestController@create');
 route::any('test/save', 'TestController@save');
 //测试
 
+
+route::get('login/login_do','LoginController@login_do');  //登录
+route::get('login/login_add','LoginController@login_add');//注册
+route::get('login/login_out','LoginController@login_out');//退出
+
+

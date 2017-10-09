@@ -41,18 +41,18 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', '127.0.0.1'),
+            'host' => env('DB_HOST', 'bdm289283378.my3w.com'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'test'),
-            'username' => env('DB_USERNAME', 'root'),
-            'password' => env('DB_PASSWORD', 'root'),
-            'charset' => 'utf8mb4',
-            'collation' => 'utf8mb4_unicode_ci',
+            'database' => env('DB_DATABASE', 'bdm289283378_db'),
+            'username' => env('DB_USERNAME', 'bdm289283378'),
+            'password' => env('DB_PASSWORD', 'baoyuyu7800004'),
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
             'prefix' => '',
             'strict' => true,
             'engine' => null,
         ],
-
+ 
         'pgsql' => [
             'driver' => 'pgsql',
             'host' => env('DB_HOST', '127.0.0.1'),
