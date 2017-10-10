@@ -8,8 +8,8 @@ class LoginController extends Controller
 {
 	
 	public function login_do(){
-		$username = isset($_GET['username'])?$_GET['username']:'';
-        $password = isset($_GET['password'])?$_GET['password']:'';
+		$username = isset($_POST['username'])?$_POST['username']:'';
+        $password = isset($_POST['password'])?$_POST['password']:'';
         if(!$username || !$password){
             echo "<script>alert('账号密码为空')</script>";
         }else{
@@ -26,8 +26,8 @@ class LoginController extends Controller
         return view('index/index');
 	}
 	public function login_add(){
-		$username = isset($_GET['username'])?$_GET['username']:'';
-        $password = isset($_GET['password'])?$_GET['password']:'';
+		$username = isset($_POST['username'])?$_POST['username']:'';
+        $password = isset($_POST['password'])?$_POST['password']:'';
         // echo $username.$password;die;
         if(!$username || !$password){
             echo "<script>alert('账号密码为空')</script>";
