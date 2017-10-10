@@ -74,7 +74,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <form action="{{ url('login/login_add') }}" method="POST">
                                 <input type="text" pattern="([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?" required="required" name="username" placeholder="Enter email / mobile" class="email">
                                 <input type="password" name="password" autocomplete="off" title="Minimum 6 characters required" pattern=".{6,}" required="required" placeholder="Password">
-                                <
+                                
                                 <input type="submit" value="注册">
                             </form>
 
