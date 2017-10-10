@@ -37,3 +37,5 @@ route::any('login/login_add','LoginController@login_add');//注册
 route::any('login/login_out','LoginController@login_out');//退出
 
 
+
+route::any('type/type','typeController@type');//左侧菜单
