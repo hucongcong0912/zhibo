@@ -12,6 +12,7 @@ class VerifyCsrfToken extends BaseVerifier
      * @var array
      */
     protected $except = [
-        //
+        'test/*', // 添加不需要验证的 控制器/方法
+        
     ];
 }

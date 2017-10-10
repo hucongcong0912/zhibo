@@ -1,8 +1,8 @@
 <?php
 namespace App\Http\Controllers;
 
-use App\Test;
-use Illuminate\Support\Facades\Request; // Test model
+use App\Test;// Test model
+use Illuminate\Http\Request; 
 
 class TestController extends Controller{
 
@@ -20,7 +20,7 @@ class TestController extends Controller{
     }
 
     public function save(Request $request){
-        $data = $request->input()->all();
-       print_r( );
+        $data = $request->all();
+       print_r($data );
     }
 }

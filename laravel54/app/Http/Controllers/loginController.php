@@ -10,6 +10,7 @@ class LoginController extends Controller
 	public function login_do(){
 		$username = isset($_GET['username'])?$_GET['username']:'';
         $password = isset($_GET['password'])?$_GET['password']:'';
+       
         if(!$username || !$password){
             echo "<script>alert('账号密码为空')</script>";
         }else{
