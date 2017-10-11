@@ -7,16 +7,16 @@ use Illuminate\Support\Facades\DB;
 class IndexController extends Controller
 {
 	// 构造方法
-	public function __construct(){
-		$type = $this->type();
+	// public function __construct(){
+	// 	$type = $this->type();
 		
-		$_SESSION['type'] = $type;
-	}
+	// 	$_SESSION['type'] = $type;
+	// }
 	// 首页
 	public function index()
 	{	
 		// print_r($_SESSION);die;
-        return view('index/index');
+        return view('index/sort');
 	}
 	//分类展示 
 	public function type(){

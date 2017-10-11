@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0; padding:0;vertical-align:middle;}
+table{border-collapse:collapse; border-spacing:0;}
+ul{list-style:none;}
+fieldset,img {border:0;}
+a{text-decoration:none; outline:none; color:#0099CB;}
+a:hover{text-decoration:none;}
+em{font-style:normal;}
+/*typography*/
+body, button, input, select, textarea {font:12px/1.5 "microsoft yahei", Regular, Helvetica, Arial, "宋体", sans-serif;}
+input{ outline:none;}
+h1 {font-size:18px;}
+h2 {font-size:16px;}
+h3 {font-size:14px;}
+h4, h5, h6 { font-size:100%; }
+code, kbd, pre, samp, tt{font-family:"Courier New", Courier, monospace;}
+
+/* 清浮动 */
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix { display: inline-block; }
+.clearfix { display: block; }
+
+/* 按钮 */
+.btn_blue_v3, .m_button { vertical-align: middle; display: inline-block; background:url(../images/forceReg.gif) no-repeat scroll -634px -27px transparent; padding-left: 3px; cursor: pointer; _cursor: hand; }
+.btn_blue_v3 span, .m_button span { font-size: 12px; display: inline-block; background:url(../images/forceReg.gif) no-repeat scroll right top transparent; padding: 0px 10px 0px 7px; line-height: 27px; color: white;  }
+.btn_blue_v3_disabled, .m_button_disabled { background-position: -634px -131px; }
+.btn_blue_v3_disabled span, .m_button_disabled span { background-position: right -104px; }
+
+/* input */
+.text_input_v3 { display: inline-block; height: 29px; overflow-y: hidden; background:url(../images/forceReg.gif) no-repeat scroll -654px -60px transparent; padding-left: 10px; _font-size: 0px; vertical-align: middle; }
+.text_input_v3 input { font-family: "microsoft yahei"; outline: none; vertical-align: middle; width: 158px; font-size: 12px; padding: 0px; border-width: 0px; height: 25px; color: #757575; padding-top: 3px\9; height: 22px\9; }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.text_input_v3 input { padding-top: 2px; height: 23px; } /* IE10。。。*/
+}
+
+.text_input_v3 .space { vertical-align: middle; display: inline-block; width: 10px; height: 29px; background:url(../images/forceReg.gif) no-repeat scroll right -60px transparent; font-size: 0px; _margin-top: -1px; _height: 28px;}
+
+/* 颜色定义 */
+.red { color: red; }
+
+.m_dialog { position: absolute; background-color: white; font-family: "Microsoft Yahei"; border: solid 1px #d6d6d6; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: 3px 3px 5px #555555;; -moz-box-shadow: 3px 3px 5px #555555; box-shadow: 3px 3px 5px #555555; color: #3e3e3e; }
+.m_dialog .dialog_title { position: relative; padding-top: 12px; padding-left: 18px;}
+.m_dialog .dialog_title h2 { font-weight: normal; font-size: 18px; }
+.m_dialog .dialog_title h2 span { font-size: 14px; color: #909090; padding-left: 15px; }
+.m_dialog .dialog_title a.close { display: inline-block; position: absolute; right: 23px; top: 18px; height: 11px; width: 13px; background:url(../images/secure_bg.gif) no-repeat scroll left top transparent; }
+.m_dialog .verify_code_img { vertical-align: middle; cursor: pointer; width: 113px; height: 37px; }
+.m_dialog .opra { text-align: center; }
+.m_dialog .opra_btn span { width: 116px; text-align: center; }
+.m_dialog .form_item { padding: 6px 0px; }
+.m_dialog .form_item .field_title { display: inline-block; width: 105px; width: 105px; text-align: right; vertical-align: middle; }
+.m_dialog .form_item .text_title { vertical-align: top; *vertical-align: middle; _vertical-align: top; }
+.m_dialog .form_notice { padding-left: 105px; }
+.m_dialog .form_notice .error { color: red; }
+.m_dialog a { color: #0000ff; }
+.m_dialog .red { color: red; }
+.m_dialog .gray { color: gray; }
+.m_dialog .blue { color: blue; }
+.m_dialog .green { color: #10a021;}
+.m_dialog .text_input_v3 input { _height: 23px; }
+.m_dialog .text_input_v3 .space { _margin-top: -1px; }
+.m_dialog .default_text { color: #757575; }
+
+.m_dialog_alert { min-width: 358px; _width: 358px; padding-top: 30px; }
+.m_dialog_alert .b_text { margin-bottom: 20px; font-size: 18px; text-align: center; }
+.m_dialog_alert .s_text { font-size: 14px; padding: 5px 20px; }
+.m_dialog_alert .s_text_center { text-align: center; }
+.m_dialog_alert .opra { margin-top: 40px; margin-bottom: 30px; }
+
+.m_dialog_confirm .opra .E_OK { margin-right: 20px; }
+.m_dialog_confirm .opra .btn_blue_v3 span { padding: 0px 20px 0px 17px }
+
+
+
+

@@ -1,0 +1,147 @@
+@charset "utf-8";
+/*huya注册 定制样式 
+* author: 夏广成;
+*/
+/* 注册第一步*/
+.m_form{
+	padding-top: 20px;
+}
+.m_form .field_title{
+	display: none;
+}
+.text_input_v3 input{
+	width: 230px;
+}
+
+/*错误信息提示*/
+.m_form .passport_item .m_focusTip,
+.m_form .pwd_item .m_focusTip{
+	left: 160px;
+}
+/*下一步*/
+
+.m_head{
+	display: none;
+}
+.vcode_change{
+	color: #fe8b37;
+}
+.btn_blue_v3{
+	padding: 0 3px;
+	border-radius: 2px;
+}
+.btn_blue_v3,.btn_blue_v3 span{
+	background: #ff7420;
+}
+.btn_blue_v3 span:hover,.btn_blue_v3:hover{
+	background: #ff8625;
+}
+.btn_blue_v3 span:active,.btn_blue_v3:active{
+	background: #ff6c13;
+}
+
+.m_forceRegStep1 .m_form .opra{
+	padding-left: 0;
+}
+
+.m_forceRegStep1 .btn_blue_v3 span{
+	width: 227px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	text-align: center;
+}
+.m_form .form_item{
+	padding: 0 0;
+	height: 50px;
+}
+.m_forceRegStep1 .step3_form_item .btn_blue_v3 span{
+	width: 94px;
+	height: 29px;
+	line-height: 29px;
+	font-size: 12px;
+}
+
+.m_forceRegStep1 .step3_opra .btn_blue_v3 span{
+	width: 94px;
+}
+.m_forceRegStep1 .m_form .opra{
+	margin-top: -40px;
+}
+
+
+/*手机验证*/
+.m_forceReg{
+	padding-left: 0;
+}
+.m_forceReg3 .text_input_v3 input{
+	width: 90px;
+}
+.m_forceRegStep3 .step3_opra{	
+	padding-left: 78px;
+}
+.m_forceRegStep3 .text_input_v3 input{
+	width: 135px;
+}
+.m_forceRegStep3 .step3_opra span{
+	width: 135px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	text-align: center;
+}
+
+.btn_blue_v3_disabled{
+	background-color: #999!important;
+}
+.btn_blue_v3_disabled span {
+    background-color: #999!important;
+}
+.btn_blue_v3_disabled span:hover,
+.btn_blue_v3_disabled:hover {
+	background-color: #999!important;
+}
+
+.m_forceRegStep7 .step7_opra .btn_next span{
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	text-align: center;
+}
+
+.m_forceRegStep7 .step7_opra .btn_next{
+	margin-left: 0;
+}
+
+/*邮箱注册*/
+.m_form .opra .btn_send span{
+	padding: 0px 10px 0px 7px;
+}
+
+/*注册成功*/
+.m_success .fr_title{
+	color: #1cab12;
+}
+.fr_title a{
+	color: #ff630e;
+}
+.tipCon p a{
+	color: #ff630e;
+}
+/* 成功标题*/
+.m_success .fr_title{
+	color: #1cab12;
+}
+/* 成功按钮*/
+.m_success .btn_blue_v3 span{
+	width: 94px;
+}
+/* 二维码*/
+.ewmCon{
+	display: none;
+}
+.m_form .form_err{
+	position: relative;
+	top: -34px;
+	padding-left: 0px;
+}
